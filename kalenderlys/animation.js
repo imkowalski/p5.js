@@ -1,4 +1,3 @@
-
 class animation {
     // Animates an array of pictures
     constructor(x,y,array,fps=10,size=[100,100]) {
