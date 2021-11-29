@@ -1,4 +1,4 @@
-let cell_size = 4;
+let cell_size = 1;
 let size = 924;
 let mid = Math.floor(size/cell_size/2);
 let start_time;
@@ -16,7 +16,7 @@ function setup() {
   createCanvas(size,size);
   background(255);
   noStroke();
-  w = new Walkers(1000)
+  w = new Walkers(90000)
   start_time = second();
   
 }

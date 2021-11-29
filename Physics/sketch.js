@@ -10,7 +10,7 @@ function preload() {
 
 function setup() {
   createCanvas(size, size);
-  c = new animation(300,300,fire,1,[100,100])
+  c = new animation(300,300,fire)
 }
 
 function draw() {
