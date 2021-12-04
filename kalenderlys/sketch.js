@@ -31,10 +31,6 @@ function draw() {
   t += 0.01;
 }
 
-function find_prc() {
-
-}
-
 class candleC {
   constructor(pos,height,fireI) {
     this.day = day();

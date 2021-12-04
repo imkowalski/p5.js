@@ -3,6 +3,8 @@
 const cell = 60
 let Csize = cell*8;
 let colors = [50,200]
+let board = {};
+let clicked = true;
 
 let symbol = {K:0,Q:1,B:2,N:3,R:4,P:5,
               k:6,q:7,b:8,n:9,r:10,p:11}
@@ -22,11 +24,11 @@ function test() {
 
 }
 
-function loadpieces() {
+function loadpieces(b) {
   for (let x = 0;x <= 7;x++) {
     for(let y = 0;y <= 7;y++){
-      if (p[y][x] !== "") { 
-        draw_piece(p[y][x],x,y)
+      if (b[y][x] !== "") { 
+        draw_piece(b[y][x],x,y)
       }
     }
   }
@@ -41,6 +43,7 @@ function preload() {
 
 function setup() {
   createCanvas(Csize,Csize);
+  board = p;
   test()
 }
 
@@ -54,8 +57,13 @@ function draw() {
       } else if (color == colors[1]) {color = colors[0]}
     }    
   }
-  loadpieces()
+  loadpieces(board)
 }
+
+function mousePressed() {
+  d = d + 10;
+}
+
 
 
 function draw_piece(id,cellx,celly) {
