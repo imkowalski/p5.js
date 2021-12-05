@@ -11,15 +11,19 @@ class animation {
       this.c = 0;
       this.size = size;
     }
+
+    // adds the abbility to move the animation to an x and y position
     move(x, y) {
       this.x = x;
       this.y = y;
     }
   
-  
+    // draws the animation at the right position and updates the image to the correct frame
     draw() {
       image(this.images[this.image],this.x,this.y,this.size[0],this.size[1])
     }
+
+    // uodate function
     update() {
       if (this.c == this.fps) {
         this.c = 0;
